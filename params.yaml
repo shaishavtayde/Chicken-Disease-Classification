@@ -1,1 +1,10 @@
-key: val
+#PARAMETERS NEED TO TRAIN THE VGG16 MODEL
+
+AUGMENTATION: True   #refers to the process of applying random transformations to the training images, such as rotation, flipping, or scaling
+IMAGE_SIZE: [224, 224, 3]  #as per vgg16 model
+BATCH_SIZE: 16  #CPU load model will process 16 images at a time before updating the weights during training
+INCLUDE_TOP: False  #Definition: This parameter specifies whether to include the fully connected layers at the top of the pre-trained model. Explanation: Setting it to False indicates that you want to use the model without its final classification layers. This is often done when fine-tuning for a specific task.
+EPOCHS: 15 #The number of times the entire training dataset is passed forward and backward through the neural network.
+CLASSES: 2 # The number of classes or categories in the classification task.
+WEIGHTS: imagenet #model with 'imagenet' weights means using pre-trained weights from a model trained on the ImageNet dataset. This can speed up training and improve performance.
+LEARNING_RATE: 0.01 #earning rate determines the step size at each iteration while moving toward a minimum of the loss function.
