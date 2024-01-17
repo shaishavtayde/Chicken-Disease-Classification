@@ -8,4 +8,5 @@
 6. Update the components
 7. Update the pipeline
 8. Update the main.py
+# A small practice, after every pipeline build, push your work to github. This helps in versioning and debugging.
 9. Update the dvc.yaml
