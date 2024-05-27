@@ -8,5 +8,7 @@
 6. Update the components
 7. Update the pipeline
 8. Update the main.py
-# A small practice, after every pipeline build, push your work to github. This helps in versioning and debugging.
 9. Update the dvc.yaml
+10. Added the FrontEND App.py
+11. For CI/CD, we need to first dockerize the project and make a container image
+12. Then deploy it on AWS.

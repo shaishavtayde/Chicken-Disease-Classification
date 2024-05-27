@@ -1,0 +1,20 @@
+
+#The Dockerfile starts by using a lightweight Python 3.8 image.
+#It updates the package list and installs the AWS CLI.
+#Sets the working directory to /app.
+#Copies the current directory's contents into the container's /app directory.
+#Installs the required Python packages listed in requirements.txt.
+#Finally, it specifies that the container should run the app.py script with Python 3 when it starts.
+#This setup is useful for deploying a Python application that depends on certain Python packages and requires the AWS CLI to interact with AWS services.
+
+
+FROM python:3.8-slim-buster
+
+RUN apt update -y && apt install awscli -y
+WORKDIR /app
+
+COPY . /app
+RUN pip install -r requirements.txt
+
+CMD ["python3", "app.py"]
+
